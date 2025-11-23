@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Invitación</title>
+
+    <!-- Fuentes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --gold: #b89063;
+            /* borde y textos dorados */
+            --dark: #040404;
+            /* interior del rectángulo */
+            --white: #ffffff;
+            --pad: 28px;
+        }
+
+        /* Reseteo simple */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            /* el usuario pidió omitir fondo */
+            font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            padding: 40px;
+        }
+
+        /* Contenedor del "rectángulo dorado" */
+        .card-wrap {
+            position: relative;
+            width: min(760px, 92vw);
+        }
+
+        .forms{
+            margin-top: 800px;
+            position: relative;
+            width: min(800px, 93vw);
+        }
+
+        .card {
+            background: var(--dark);
+            border: 7px solid var(--gold);
+            padding: 36px 40px;
+            color: var(--white);
+            position: relative;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+            /* proporciona un aspecto "marco" alto */
+        }
+
+        /* Opcional: comentar la línea siguiente si quieres ver el archivo original de referencia.
+     Ruta del archivo original subido: /mnt/data/489c54b0-e5d9-4783-9308-16275a7f7e66.jpg
+     background-image: url('/mnt/data/489c54b0-e5d9-4783-9308-16275a7f7e66.jpg');
+     background-size: cover;
+     background-position: center;
+  */
+
+        /* Layout dentro del rectángulo */
+        .top {
+            text-align: center;
+            margin-bottom: 6px;
+        }
+
+        .name {
+            font-family: "Playfair Display", serif;
+            font-weight: 900;
+            font-size: clamp(34px, 5.0vw, 46px);
+            letter-spacing: 2px;
+            color: var(--white);
+        }
+
+        .subtitle {
+            font-family: "Montserrat", sans-serif;
+            color: var(--gold);
+            font-weight: 400;
+            font-size: clamp(16px, 2.15vw, 22px);
+            margin-top: 6px;
+        }
+
+        /* Gran número central */
+        .big-number-row {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 12px;
+            margin: 18px 0 6px;
+            position: relative;
+        }
+
+        .big-number {
+            font-family: "Playfair Display", serif;
+            font-weight: 900;
+            font-size: clamp(140px, 26vw, 280px);
+            /* tamaño responsivo */
+            line-height: 0.85;
+            color: var(--white);
+            letter-spacing: -6px;
+            margin-bottom: 6px;
+        }
+
+        /* "Años" pequeño y rotado sobre la O */
+        .anos {
+            font-family: "Playfair Display", serif;
+            color: var(--white);
+            font-weight: 700;
+            font-size: clamp(26px, 2.8vw, 28px);
+            transform: rotate(-20deg);
+            transform-origin: left bottom;
+            margin-bottom: 36px;
+            margin-left: 410px;
+        }
+
+        /* Texto invitación */
+        .invite-line {
+            text-align: center;
+            color: var(--gold);
+            font-size: clamp(18px, 2.2vw, 26px);
+            margin-top: 4px;
+            margin-bottom: 12px;
+        }
+
+        /* Fecha y hora */
+        .date {
+            text-align: center;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(22px, 3.2vw, 36px);
+            color: var(--white);
+            font-weight: 700;
+            margin-top: 6px;
+        }
+
+        .time {
+            text-align: center;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(18px, 2.4vw, 26px);
+            color: var(--white);
+            margin-top: 6px;
+        }
+
+        .venue {
+            text-align: center;
+            font-family: "Playfair Display", serif;
+            font-weight: 700;
+            font-size: clamp(12px, 1.8vw, 16px);
+            color: var(--white);
+            margin-top: 12px;
+            letter-spacing: 1px;
+        }
+
+        /* Confirmación */
+        .confirm {
+            margin-top: 22px;
+            text-align: center;
+            color: var(--gold);
+            font-size: clamp(18px, 2.4vw, 28px);
+            font-weight: 400;
+        }
+
+        /* Ajustes para pantallas pequeñas */
+        @media (max-width:422px) {
+            .big-number {
+                font-size: 180px;
+            }
+
+            .anos {
+                margin-left: 169px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card-wrap" aria-label="Invitación - rectángulo dorado">
+        <div class="card">
+            <div class="top">
+                <div class="name">IZAURA</div>
+                <div class="subtitle">estará cumpliendo</div>
+            </div>
+
+            <div class="big-number-row" role="img" aria-label="50 años">
+                <div class="big-number">50</div>
+            </div>
+            <div class="anos">Años</div>
+
+            <div class="invite-line">ven a festejarlo</div>
+
+            <div class="date">sábado 20/12/25</div>
+            <div class="time">12:00 del medio día</div>
+
+            <div class="venue">SALÓN Y JARDÍN CASA DEL LLANO</div>
+
+            <div class="confirm">↓ Confirma tu Asistencia ↓</div>
+        </div>
+        <br>
+    </div>
+    <div class="forms">
+            <div>formulario</div>
+    </div>
+</body>
+
+</html>
