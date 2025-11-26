@@ -268,6 +268,7 @@
     <button onclick="confirmar()">Confirmar asistencia</button>
 
     <div class="row">
+
       <button class="calendar-btn" onclick="agregarCalendario()">Agregar a mi calendario</button>
       <button class="calendar-btn" onclick="window.open('https://maps.app.goo.gl/emBz7sdcLyAky93v7', '_blank')"
         type="button">Ubicación del Evento</button>
@@ -318,7 +319,8 @@
     }
 
     function agregarCalendario() {
-      alert("Aquí puedes integrar el archivo .ics para agregar al calendario");
+      window.open('https://calendar.app.google/99M8m11FGkhjXiXg6', '_blank')
+      //alert("Aquí puedes integrar el archivo .ics para agregar al calendario");
     }
 
     function ubicacionMapa() {
