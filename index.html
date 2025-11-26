@@ -171,7 +171,7 @@
       margin-top: 5px;
     }
 
-    @media (max-width: 354px) {
+    @media (max-width: 337px) {
       .confirm {
         font-size: 17px;
       }
@@ -255,19 +255,22 @@
       </div>
     </div>
 
+    <!-- Forms Oculato para Enviar los Datos --> 
     <form id="googleForm"
       action="https://docs.google.com/forms/d/e/1FAIpQLSeZOcaFhxacDJ9EYNmGjgQ-e2qe_xnLjIaC8WuaYSFWegs9-A/formResponse"
-      method="POST" style="display:none;">
+      method="POST" target="hidden_iframe" style="display:none;">
       <input name="entry.1325154198" id="gCorreo"> <!-- Correo -->
       <input name="entry.2108065960" id="gFamilia"> <!-- Familia -->
       <input name="entry.1673681373" id="gAdultos"> <!-- Adultos -->
       <input name="entry.1423679706" id="gNinos"> <!-- Niños -->
     </form>
 
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
     <button onclick="confirmar()">Confirmar asistencia</button>
 
     <div class="row">
+
 
       <button class="calendar-btn" onclick="agregarCalendario()">Agregar a mi calendario</button>
       <button class="calendar-btn" onclick="window.open('https://maps.app.goo.gl/emBz7sdcLyAky93v7', '_blank')"
@@ -307,6 +310,7 @@
 
       if (ok) {
         alert("¡Asistencia confirmada!\nCorreo: " + correo + "\nAdultos: " + adultos + "\nNiños: " + ninos);
+        
         // Llenar formulario oculto
         document.getElementById("gCorreo").value = correo;
         document.getElementById("gFamilia").value = familia;
@@ -315,11 +319,16 @@
 
         // Enviar a Google Forms
         document.getElementById("googleForm").submit();
+
+        // Limpiar el formulario después del envío
+        document.getElementById("correo").value = "";
+        document.getElementById("adultos").value = "";
+        document.getElementById("ninos").value = "";
       }
     }
 
     function agregarCalendario() {
-      window.open('https://calendar.app.google/99M8m11FGkhjXiXg6', '_blank')
+      window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&text=Cumplea%C3%B1os%20de%20Izaura&dates=20251220T120000/20251220T150000&location=Sal%C3%B3n%20y%20Jard%C3%ADn%20Casa%20del%20Llano&details=Acomp%C3%A1%C3%B1anos%20a%20celebrar', '_blank')
       //alert("Aquí puedes integrar el archivo .ics para agregar al calendario");
     }
 
