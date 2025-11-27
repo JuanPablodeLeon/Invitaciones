@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -180,6 +183,15 @@
         font-size: 15px;
       }
     }
+
+    .swal-dorado {
+      border: 4px solid #b89063 !important;
+      /* borde dorado */
+      border-radius: 12px !important;
+      /* esquinas elegantes */
+      box-shadow: 0 0 20px rgba(185, 144, 99, 0.5) !important;
+      /* brillo suave */
+    }
   </style>
 </head>
 
@@ -255,7 +267,7 @@
       </div>
     </div>
 
-    <!-- Forms Oculato para Enviar los Datos --> 
+    <!-- Forms Oculato para Enviar los Datos -->
     <form id="googleForm"
       action="https://docs.google.com/forms/d/e/1FAIpQLSeZOcaFhxacDJ9EYNmGjgQ-e2qe_xnLjIaC8WuaYSFWegs9-A/formResponse"
       method="POST" target="hidden_iframe" style="display:none;">
@@ -309,8 +321,45 @@
       }
 
       if (ok) {
-        alert("¡Asistencia confirmada!\nCorreo: " + correo + "\nAdultos: " + adultos + "\nNiños: " + ninos);
-        
+        //alert("¡Asistencia confirmada!\nCorreo: " + correo + "\nAdultos: " + adultos + "\nNiños: " + ninos);
+
+        Swal.fire({
+          title: "¡Asistencia confirmada!",
+          html: `
+    <p style="font-size:16px;"><b>Correo:</b> ${correo}</p>
+    <p style="font-size:16px;"><b>Invitado(s):</b> ${familia}</p>
+    <p style="font-size:16px;"><b>Adultos:</b> ${adultos}</p>
+    <p style="font-size:16px;"><b>Niños:</b> ${ninos}</p>
+  `,
+          icon: "success",
+          // Colores personalizados
+          background: "#000",     // Fondo negro elegante
+          color: "#fff",          // Texto blanco
+          iconColor: "#b89063",   // Icono dorado
+          confirmButtonColor: "#b89063",
+          confirmButtonText: "Aceptar",
+
+          customClass: {
+            popup: "swal-dorado"
+          },
+
+          showClass: {
+            popup: `
+      animate__animated
+      animate__fadeInUp
+      animate__faster
+    `
+          },
+          hideClass: {
+            popup: `
+      animate__animated
+      animate__fadeOutDown
+      animate__faster
+    `
+          }
+        });
+
+
         // Llenar formulario oculto
         document.getElementById("gCorreo").value = correo;
         document.getElementById("gFamilia").value = familia;
