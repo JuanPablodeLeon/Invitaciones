@@ -8,20 +8,16 @@ nombres5 = ["Prof_Roberto", "Sharon", "Ing_Mario", "Profa_Anita", "Rony"]
 nombres6 = ["Ing_Carlos", "Scarleth", "Liliana", "Ing_Herman", "Profa_Magnolia"]
 nombres7 = ["Lica_Dedy", "Lica_Evelyn", "Sra_Elena", "Ing_Jovany"]
 
-""" 
-nombreArchivoHTML=["LicJuanRamonLopezyfam","GloriaMirandaShaul","IngaAndreaShaulehijo","",""]
-nombreArchivoHTML1=["","","","",""]
-nombreArchivoHTML2=["","","","",""]
-nombreArchivoHTML3=["","","","",""]
-nombreArchivoHTML4=["","","","",""]
-nombreArchivoHTML5=["","","","",""]
-nombreArchivoHTML6=["","","","",""]  
-"""
 
+"""
+for nombre in nombres1:
+    print("https://juanpablodeleon.github.io/Invitaciones/"+nombre+".html")
+"""
 
 #for nombre in nombres:
 #    print("./QRs\\"+nombre+".png")
 
+#Modificar por el numero por cada lista
 for nombre in nombres1:
     url ="https://juanpablodeleon.github.io/Invitaciones/"+nombre+".html"
     file_path = "./QRs\\qr"+nombre+".png"
@@ -34,6 +30,8 @@ for nombre in nombres1:
 
     print(url)
     print("Creado")
+
+
 
 """
 nombr= "invitacion"
