@@ -18,7 +18,7 @@ for nombre in nombres1:
 #    print("./QRs\\"+nombre+".png")
 
 #Modificar por el numero por cada lista
-for nombre in nombres1:
+for nombre in nombres2:
     url ="https://juanpablodeleon.github.io/Invitaciones/"+nombre+".html"
     file_path = "./QRs\\qr"+nombre+".png"
 
