@@ -6,7 +6,7 @@ nombres3 = ["Lic_Manolita", "Profa_Karla", "Sra_Marcela", "Profa_Eunice", "Ing_I
 nombres4 = ["Prof_Bernardo", "Anita_Perez", "Ing_Miguel", "Javier", "Julio"]
 nombres5 = ["Prof_Roberto", "Sharon", "Ing_Mario", "Profa_Anita", "Rony"]
 nombres6 = ["Ing_Carlos", "Scarleth", "Liliana", "Ing_Herman", "Profa_Magnolia"]
-nombres7 = ["Lica_Dedy", "Lica_Evelyn", "Sra_Elena", "Ing_Jovany", "Ing_Hector"]
+nombres7 = ["Lica_Dedy", "Lica_Evelyn", "Sra_Elena", "Ing_Jovany", "Ing_Hector", "Karla_Monroy"]
 
 
 """
